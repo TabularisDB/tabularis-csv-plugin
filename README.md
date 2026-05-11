@@ -9,7 +9,7 @@
 ![](https://img.shields.io/github/release/debba/tabularis-csv-plugin.svg?style=flat)
 ![](https://img.shields.io/github/downloads/debba/tabularis-csv-plugin/total.svg?style=flat)
 ![Build & Release](https://github.com/debba/tabularis-csv-plugin/workflows/Release/badge.svg)
-[![Discord](https://img.shields.io/discord/1470772941296894128?color=5865F2&logo=discord&logoColor=white)](https://discord.gg/YrZPHAwMSG)
+[![Discord](https://img.shields.io/discord/1470772941296894128?color=5865F2&logo=discord&logoColor=white)](https://discord.com/invite/K2hmhfHRSt)
 
 </p>
 
@@ -19,7 +19,7 @@ This plugin turns a **folder of `.csv` or `.tsv` files into a queryable database
 
 **Zero dependencies** — pure Python 3.8+ standard library. No `pip install`.
 
-**Discord** - [Join our discord server](https://discord.gg/YrZPHAwMSG) and chat with the maintainers.
+**Discord** - [Join our discord server](https://discord.com/invite/K2hmhfHRSt) and chat with the maintainers.
 
 ## Table of Contents
 
