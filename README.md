@@ -9,7 +9,7 @@
 ![](https://img.shields.io/github/release/debba/tabularis-csv-plugin.svg?style=flat)
 ![](https://img.shields.io/github/downloads/debba/tabularis-csv-plugin/total.svg?style=flat)
 ![Build & Release](https://github.com/debba/tabularis-csv-plugin/workflows/Release/badge.svg)
-[![Discord](https://img.shields.io/discord/1470772941296894128?color=5865F2&logo=discord&logoColor=white)](https://discord.com/invite/K2hmhfHRSt)
+[![Discord](https://img.shields.io/discord/1502944695808950282?color=5865F2&logo=discord&logoColor=white)](https://discord.com/invite/K2hmhfHRSt)
 
 </p>
 
