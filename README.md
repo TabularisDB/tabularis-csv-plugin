@@ -54,7 +54,7 @@ Open **Settings → Available Plugins** in Tabularis and install **CSV Folder** 
 
 1. Download the latest `csv-plugin.zip` from the [Releases page](https://github.com/debba/tabularis-csv-plugin/releases).
 2. Extract the archive.
-3. Copy `plugin.py` and `manifest.json` into the Tabularis plugins directory:
+3. Copy `plugin.py` and `.tabularium` into the Tabularis plugins directory:
 
 | OS | Plugins Directory |
 |---|---|
