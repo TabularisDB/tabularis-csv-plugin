@@ -24,7 +24,7 @@ esac
 DEST="$PLUGINS_DIR/$PLUGIN_ID"
 mkdir -p "$DEST"
 
-cp plugin.py manifest.json "$DEST/"
+cp plugin.py .tabularium "$DEST/"
 chmod +x "$DEST/plugin.py"
 
 echo "Installed to: $DEST"

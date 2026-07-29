@@ -17,10 +17,12 @@ jobs:
       - name: Build zip
         run: |
           chmod +x plugin.py
-          zip tabularis-csv-plugin.zip plugin.py manifest.json
+          zip tabularis-csv-plugin.zip plugin.py .tabularium
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: tabularis-csv-plugin.zip
+          files: |
+            tabularis-csv-plugin.zip
+            .tabularium
           generate_release_notes: true

@@ -16,8 +16,23 @@
     "alter_primary_key": false
   },
   "data_types": [
-    { "name": "TEXT",    "category": "string",  "requires_length": false, "requires_precision": false },
-    { "name": "INTEGER", "category": "numeric", "requires_length": false, "requires_precision": false },
-    { "name": "REAL",    "category": "numeric", "requires_length": false, "requires_precision": false }
+    {
+      "name": "TEXT",
+      "category": "string",
+      "requires_length": false,
+      "requires_precision": false
+    },
+    {
+      "name": "INTEGER",
+      "category": "numeric",
+      "requires_length": false,
+      "requires_precision": false
+    },
+    {
+      "name": "REAL",
+      "category": "numeric",
+      "requires_length": false,
+      "requires_precision": false
+    }
   ]
 }
