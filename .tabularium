@@ -8,6 +8,7 @@
     "sql"
   ],
   "executable": "plugin.py",
+  "icon": "assets/icon.png",
   "capabilities": {
     "schemas": false,
     "views": false,

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#10b981"/>
+      <stop offset="1" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="url(#bg)"/>
+  <g fill="#ffffff">
+    <rect x="48" y="44" width="160" height="26" rx="8" opacity="0.95"/>
+    <g opacity="0.55">
+      <rect x="48" y="80" width="46" height="22" rx="6"/>
+      <rect x="105" y="80" width="46" height="22" rx="6"/>
+      <rect x="162" y="80" width="46" height="22" rx="6"/>
+      <rect x="48" y="112" width="46" height="22" rx="6"/>
+      <rect x="105" y="112" width="46" height="22" rx="6"/>
+      <rect x="162" y="112" width="46" height="22" rx="6"/>
+    </g>
+  </g>
+  <text x="128" y="214" text-anchor="middle" font-family="DejaVu Sans" font-weight="bold" font-size="70" fill="#ffffff" letter-spacing="3">CSV</text>
+</svg>
