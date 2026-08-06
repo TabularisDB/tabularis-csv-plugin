@@ -1,6 +1,6 @@
 {
   "name": "csv",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "kind": "driver",
   "description": "Query a folder of .csv / .tsv files as a database. Each file becomes a table.",
   "engine": "csv",
@@ -8,6 +8,7 @@
     "sql"
   ],
   "executable": "plugin.py",
+  "icon": "assets/icon.png",
   "capabilities": {
     "schemas": false,
     "views": false,
