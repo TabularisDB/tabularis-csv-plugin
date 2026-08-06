@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.4] - 2026-08-06
+
+### Fixed
+
+- Release asset renamed from `tabularis-csv-plugin.zip` to `tabularis-csv-plugin-<version>-universal.zip`. The Tabularium registry maps release assets to platforms by filename suffix, so the unsuffixed zip was ingested with no platform assets and the plugin showed as unavailable in Tabularis on every OS.
+
 ## [1.0.1] - 2026-02-25
 
 ### Fixed

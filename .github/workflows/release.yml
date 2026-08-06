@@ -14,15 +14,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # The asset must be named <name>-<version>-<platform>.zip so the
+      # Tabularium registry can map it to a platform key at ingest. This
+      # plugin is pure Python, so the single "universal" asset covers
+      # every platform. An unsuffixed zip is ignored by the registry and
+      # the plugin shows up as unavailable in Tabularis.
       - name: Build zip
         run: |
           chmod +x plugin.py
-          zip tabularis-csv-plugin.zip plugin.py .tabularium
+          VERSION="${GITHUB_REF_NAME#v}"
+          zip "tabularis-csv-plugin-${VERSION}-universal.zip" plugin.py .tabularium
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            tabularis-csv-plugin.zip
+            tabularis-csv-plugin-*-universal.zip
             .tabularium
           generate_release_notes: true
