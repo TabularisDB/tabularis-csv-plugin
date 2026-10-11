@@ -198,7 +198,9 @@ def handle(method: str, params: dict) -> object:
     if method == "execute_query":
         query     = params.get("query", "").strip()
         page      = max(1, int(params.get("page", 1)))
-        page_size = max(1, int(params.get("page_size", 100)))
+        # The host sends `limit` for grid pagination. Keep `page_size` as a
+        # fallback for older callers of this plugin.
+        page_size = max(1, int(params.get("limit") or params.get("page_size") or 100))
 
         cur      = db.execute(query)
         all_rows = cur.fetchall()
