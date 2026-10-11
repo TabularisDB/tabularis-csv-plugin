@@ -1,6 +1,7 @@
 {
-  "name": "csv",
-  "version": "1.0.4",
+  "id": "csv",
+  "name": "CSV",
+  "version": "1.0.5",
   "kind": "driver",
   "description": "Query a folder of .csv / .tsv files as a database. Each file becomes a table.",
   "engine": "csv",

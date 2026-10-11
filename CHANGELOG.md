@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.5] - 2026-10-11
+
+### Changed
+
+- Manifest now declares a stable `id` (`csv`) and a human-readable `name` (`CSV`) for the registry and the Tabularis catalogue.
+
+### Fixed
+
+- Query results honour the page size requested by Tabularis (`limit`) instead of always returning pages of 100 rows; `page_size` is kept as a fallback for older hosts (#5, thanks @vivekyarra).
+
 ## [1.0.4] - 2026-08-06
 
 ### Added
