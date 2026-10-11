@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+    # Default types miss title-only edits, which pr-title needs to re-check.
+    types: [opened, edited, reopened, synchronize]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          # plugin.py uses PEP 604 unions (`X | None`), so 3.10 is the floor.
+          python-version: "3.10"
+
+      - name: Run tests
+        run: python -m unittest -v
+
+  validate-manifest:
+    name: Validate .tabularium manifest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Validate against the live registry schema
+        run: npx --yes @tabularium/cli validate .tabularium --registry https://registry.tabularis.dev --kind driver
+
+  pr-title:
+    name: PR title (Conventional Commits)
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+    steps:
+      - uses: amannn/action-semantic-pull-request@v6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  markdownlint:
+    name: Markdown lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Run markdownlint
+        run: npx --yes markdownlint-cli "**/*.md"
