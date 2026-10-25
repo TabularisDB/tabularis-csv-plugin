@@ -53,24 +53,26 @@ jobs:
           fi
 
           case "$TYPE" in
-            feat) CLASS=minor ;;
-            fix|refactor|perf) CLASS=patch ;;
-            docs|style|chore|test|ci|build) CLASS=none ;;
-            *) CLASS=none ;;
+            feat) CLASS="minor" ;;
+            fix|refactor|perf) CLASS="patch" ;;
+            docs|style|chore|test|ci|build) CLASS="none" ;;
+            *) CLASS="none" ;;
           esac
-          [ "$BREAKING" = true ] && CLASS=major
+          [ "$BREAKING" = true ] && CLASS="major"
 
           CHANNEL=$(echo "$PR_LABELS" | jq -r '[.[] | select(.name | startswith("prerelease:")) | .name][0] // ""' | sed 's/^prerelease://')
-          [ -z "$CHANNEL" ] && CHANNEL=stable
+          [ -z "$CHANNEL" ] && CHANNEL="stable"
           case "$CHANNEL" in
             alpha|beta|rc|stable) ;;
             *) echo "::error::Unrecognized prerelease label value '$CHANNEL' — expected alpha, beta, rc, or stable."; exit 1 ;;
           esac
 
-          echo "type=$TYPE" >> "$GITHUB_OUTPUT"
-          echo "breaking=$BREAKING" >> "$GITHUB_OUTPUT"
-          echo "class=$CLASS" >> "$GITHUB_OUTPUT"
-          echo "channel=$CHANNEL" >> "$GITHUB_OUTPUT"
+          {
+            echo "type=$TYPE"
+            echo "breaking=$BREAKING"
+            echo "class=$CLASS"
+            echo "channel=$CHANNEL"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Resolve baseline version
         id: baseline
