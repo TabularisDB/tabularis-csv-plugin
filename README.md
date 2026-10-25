@@ -16,8 +16,8 @@
 
 <p align="center">
 
-![](https://img.shields.io/github/release/debba/tabularis-csv-plugin.svg?style=flat)
-![](https://img.shields.io/github/downloads/debba/tabularis-csv-plugin/total.svg?style=flat)
+![Latest release](https://img.shields.io/github/release/debba/tabularis-csv-plugin.svg?style=flat)
+![Downloads](https://img.shields.io/github/downloads/debba/tabularis-csv-plugin/total.svg?style=flat)
 ![Build & Release](https://github.com/debba/tabularis-csv-plugin/workflows/Release/badge.svg)
 [![Discord](https://img.shields.io/discord/1502944695808950282?color=5865F2&logo=discord&logoColor=white)](https://discord.com/invite/K2hmhfHRSt)
 
@@ -66,21 +66,21 @@ Open **Settings → Available Plugins** in Tabularis and install **CSV Folder** 
 2. Extract the archive.
 3. Copy `plugin.py` and `.tabularium` into the Tabularis plugins directory:
 
-| OS | Plugins Directory |
-|---|---|
-| **Linux** | `~/.local/share/tabularis/plugins/csv/` |
-| **macOS** | `~/Library/Application Support/com.debba.tabularis/plugins/csv/` |
-| **Windows** | `%APPDATA%\com.debba.tabularis\plugins\csv\` |
+   | OS | Plugins Directory |
+   |---|---|
+   | **Linux** | `~/.local/share/tabularis/plugins/csv/` |
+   | **macOS** | `~/Library/Application Support/com.debba.tabularis/plugins/csv/` |
+   | **Windows** | `%APPDATA%\com.debba.tabularis\plugins\csv\` |
 
 4. Make the plugin executable (Linux/macOS):
 
-```bash
-chmod +x ~/.local/share/tabularis/plugins/csv/plugin.py
-```
+   ```bash
+   chmod +x ~/.local/share/tabularis/plugins/csv/plugin.py
+   ```
 
 5. Restart Tabularis.
 
-Python 3.8 or newer must be available as `python3` in your `PATH`.
+Python 3.10 or newer must be available as `python3` in your `PATH`.
 
 ## How It Works
 
